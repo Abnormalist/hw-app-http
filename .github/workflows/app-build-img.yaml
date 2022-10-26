@@ -1,0 +1,20 @@
+name: go application
+
+on:
+  push:
+   branches: [ main ]
+  pull_request:
+    branches: [ main ]
+      
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build & Push Image
+      run: |
+        echo "${{ secrets.DOCKERPW }}" | docker login -u "4435561349" --password-stdin
+        docker image build -t 4435561349/hw-app-go:latest .
+        docker push 4435561349/apptest:latest
