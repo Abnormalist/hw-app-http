@@ -15,6 +15,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build & Push Image
       run: |
-        echo "${{ secrets.DOCKERPW }}" | docker login -u "4435561349" --password-stdin
+        echo "${{ secrets.DOCKERPW }}" | docker login -u "frdmort@protonmail.com" --password-stdin
         docker image build -t 4435561349/hw-app-go:latest .
         docker push 4435561349/apptest:latest
