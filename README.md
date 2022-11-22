@@ -1,4 +1,4 @@
-# Use Nginx Reverse Proxy to serve Go Services
+# Test App Go Service
 Golang served by Nginx reverse proxy.
 
 
@@ -11,13 +11,13 @@ Golang served by Nginx reverse proxy.
 #  <font color='red'>Installation</font>
 * Browse the repository's root
 * Build the images 
-    - `docker build -t app-go-hw`
+    - `docker build -t hw-app-go`
 * Start containers 
     - `docker run -d -p 11130:11130 --name app-go-hw
 
 After starting containers you can test the Api at:
 ```url
-http://localhost/api/
+http://localhost:11130/
 ```
 
 #  <font color='red'>Code Building</font>
