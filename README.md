@@ -19,9 +19,31 @@ http://localhost:11130/
 ```
 
 #  <font color='red'>Code Building</font>
-Golang is a compiled programming language so to make any changes to your app, you need to build the executable again.
-In this repo the build process is done inside the docker-build process.
-So when you need to re-compile the code you can follow this steps:
+In this repo the build process with git wark-flow to docker_registry
+```
+name: go application
+
+on:
+  push:
+   branches: [ main ]
+  pull_request:
+    branches: [ main ]
+      
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build & Push Image
+      run: |
+        echo "${{ secrets.DOCKERPW }}" | docker login -u "4435561349" --password-stdin
+        docker image build -t 4435561349/apptest:latest .
+        docker push 4435561349/apptest:latest
+```
 
 
-To simplify this steps you can create a makefile and group this commands in a single one, or on *nix system you can use this version of the commands: 
+
+
+
