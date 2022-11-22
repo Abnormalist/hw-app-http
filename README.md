@@ -19,30 +19,8 @@ http://localhost:11130/
 ```
 
 #  <font color='red'>Code Building</font>
-In this repo the build process with git wark-flow to docker_registry
-```
-name: go application
-
-on:
-  push:
-   branches: [ main ]
-  pull_request:
-    branches: [ main ]
-      
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v1
-    - name: Build & Push Image
-      run: |
-        echo "${{ secrets.DOCKERPW }}" | docker login -u "4435561349" --password-stdin
-        docker image build -t 4435561349/apptest:latest .
-        docker push 4435561349/apptest:latest
-```
-
+In this repo the build process with .github/workflows to docker_registry
+It's up to you to fork and use it like you want.
 
 
 
