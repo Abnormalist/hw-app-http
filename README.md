@@ -20,7 +20,7 @@ http://localhost:11130/
 #  <font color='red'>Code Building</font>
 In this repo the build process with .github/workflows to docker_registry
 It's up to you to fork and use it like you want.
-
+After committing, you can find a docker image in the docker public registry
 
 
 
