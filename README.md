@@ -1,5 +1,4 @@
 # Test App Go Service
-Golang served by Nginx reverse proxy.
 
 
 #  <font color='red'>Requirements</font>
