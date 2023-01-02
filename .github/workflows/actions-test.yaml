@@ -1,0 +1,11 @@
+name: actions-test
+on:
+  push:
+    branches: [develop]
+  pull_request:
+    branches: [develop]
+jobs:
+  print-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, janbo @Fredrik"
